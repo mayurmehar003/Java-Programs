@@ -1,40 +1,41 @@
-package day1;
+//Perfect Square : Product of an integer(3) is multiplied by itself(3) =9
+import java.util.Scanner;
 
 class Program12
 {
 	public static void main(String[] args)
 	{
-		int num=84411;
+		Scanner inp=new Scanner(System.in);
 		
-		int temp=num;
+		System.out.println("Enter the Number : ");
+		int num=inp.nextInt();
 		
-		int extremesum=0;
-		int meansum=0;
+		boolean isperfectsquare=false;
 		
-		while(temp!=0)
+		for(int i=1;i*i<=num;i++)
 		{
-			if(temp==num || temp<10)
+			if(i*i==num)
 			{
-				extremesum=extremesum+temp%10;
-			}
-			else
-			{
-				meansum=meansum+temp%10;
+				isperfectsquare=true;
+				break;
 			}
 			
-			temp=temp/10;
+			
 		}
 		
-		if(extremesum==meansum)
+		if(isperfectsquare)
 		{
-			System.out.println("Xylem Number");
+			System.out.println("Perfect Square");
+			
+			
 		}
-		else{
-			System.out.println("Phloem Number");
+		else
+		{
+			System.out.println("Not Perfect Square");
 		}
-		
 		
 		
 		
 	}
+	
 }
